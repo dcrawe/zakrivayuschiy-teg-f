@@ -11,8 +11,242 @@
     <link rel="stylesheet" href="./styles/animations.css" />
   </head>
   <body class="page">
-    <header class="header"></header>
-    <main></main>
+    <header class="header">
+      <div class="header__container container">
+        <h1 class="header__title">
+          &lt;/HTML&gt;
+          <span class="header__subtitle">закрывающий тег</span>
+        </h1>
+      </div>
+    </header>
+    <main class="content">
+      <section class="cards">
+        <div class="cards__container container">
+          <!-- Карточка 1 -->
+          <article class="card">
+            <h2 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
+            <div class="card__image-container">
+              <img class="card__image" src="images/car.png" alt="Фургон на фиолетовом фоне">
+              <span class="card__label">&lt;/HTML&gt;</span>
+            </div>
+            <div class="card__content">
+              <p class="card__text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
+              <p class="card__text">Место для ваших воспоминаний о начале обучения.</p>
+              <div class="card__buttons">
+                <button class="button card__like-button">
+                  <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <use href="images/icons.svg#like-icon"></use>
+                  </svg>
+                </button>
+                <button class="button card__save-button">
+                  <span class="button__text">Like</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Карточка 2 -->
+          <article class="card">
+            <div class="card__image-container">
+              <img class="card__image card__image_filter_grayscale" src="images/card-2.jpg" alt="Фургон в ночное время">
+              <span class="card__label">Погружение</span>
+            </div>
+            <div class="card__content">
+              <h2 class="card__title">Погружение в CSS</h2>
+              <p class="card__text">Изучение CSS открыло для меня мир стилизации и дизайна. Первые эксперименты с цветами, отступами и позиционированием элементов показали, как сильно можно изменить внешний вид страницы. Было непросто разобраться с каскадностью и специфичностью селекторов, но постепенно всё стало складываться в единую картину.</p>
+              <div class="card__buttons">
+                <button class="button card__like-button">
+                  <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                  <span class="button__text">Like</span>
+                </button>
+                <button class="button card__save-button">
+                  <svg class="save-icon" width="24" height="24">
+                    <use href="images/icons.svg#save"></use>
+                  </svg>
+                  <span class="button__text">Сохранить на память</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Карточка 3 -->
+          <article class="card">
+            <div class="card__image-container">
+              <img class="card__image card__image_filter_hue-rotate" src="images/card-3.jpg" alt="Фургон с фиолетовым фильтром">
+              <span class="card__label">Открытие</span>
+            </div>
+            <div class="card__content">
+              <h2 class="card__title">Открытие JavaScript</h2>
+              <p class="card__text">JavaScript стал для меня настоящим открытием. Возможность добавить интерактивность на страницу, реагировать на действия пользователя, менять содержимое без перезагрузки — всё это казалось магией. Первый скрипт, который менял текст на странице при клике, вызвал настоящий восторг и желание узнать больше.</p>
+              <div class="card__buttons">
+                <button class="button card__like-button">
+                  <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                  <span class="button__text">Like</span>
+                </button>
+                <button class="button card__save-button">
+                  <svg class="save-icon" width="24" height="24">
+                    <use href="images/icons.svg#save"></use>
+                  </svg>
+                  <span class="button__text">Сохранить на память</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Карточка 4 -->
+          <article class="card">
+            <div class="card__image-container">
+              <img class="card__image card__image_filter_contrast" src="images/card-4.jpg" alt="Фургон с повышенным контрастом">
+              <span class="card__label">Борьба</span>
+            </div>
+            <div class="card__content">
+              <h2 class="card__title">Борьба с отладкой</h2>
+              <p class="card__text">Отладка кода — это настоящее испытание на прочность. Часами искать ошибку, которая оказывается пропущенной запятой или опечаткой в названии переменной, стало частью повседневной работы. Но именно в процессе отладки я научился глубже понимать, как работает код и как мыслить более структурированно.</p>
+              <div class="card__buttons">
+                <button class="button card__like-button">
+                  <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                  <span class="button__text">Like</span>
+                </button>
+                <button class="button card__save-button">
+                  <svg class="save-icon" width="24" height="24">
+                    <use href="images/icons.svg#save"></use>
+                  </svg>
+                  <span class="button__text">Сохранить на память</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Карточка 5 -->
+          <article class="card">
+            <div class="card__image-container">
+              <img class="card__image card__image_filter_brightness" src="images/card-5.jpg" alt="Фургон на светлом фоне">
+              <span class="card__label">Свет</span>
+            </div>
+            <div class="card__content">
+              <h2 class="card__title">Свет в конце туннеля</h2>
+              <p class="card__text">Момент, когда начинаешь понимать паттерны и принципы разработки, сравним с обретением света в конце туннеля. Код становится более осмысленным, решения — более элегантными. Это не значит, что проблем стало меньше, просто теперь у меня появился фонарик, освещающий путь к их решению.</p>
+              <div class="card__buttons">
+                <button class="button card__like-button">
+                  <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                  <span class="button__text">Like</span>
+                </button>
+                <button class="button card__save-button">
+                  <svg class="save-icon" width="24" height="24">
+                    <use href="images/icons.svg#save"></use>
+                  </svg>
+                  <span class="button__text">Сохранить на память</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Карточка 6 -->
+          <article class="card">
+            <div class="card__image-container">
+              <img class="card__image card__image_filter_invert" src="images/card-6.jpg" alt="Фургон с инвертированными цветами">
+              <span class="card__label">Инверсия</span>
+            </div>
+            <div class="card__content">
+              <h2 class="card__title">Инверсия мышления</h2>
+              <p class="card__text">Работа над сложными проектами часто требует инверсии мышления — способности посмотреть на проблему с совершенно другой стороны. Иногда решение кроется не в добавлении нового кода, а в удалении лишнего или в полном переосмыслении подхода. Это важный навык, который приходит с опытом.</p>
+              <div class="card__buttons">
+                <button class="button card__like-button">
+                  <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                  <span class="button__text">Like</span>
+                </button>
+                <button class="button card__save-button">
+                  <svg class="save-icon" width="24" height="24">
+                    <use href="images/icons.svg#save"></use>
+                  </svg>
+                  <span class="button__text">Сохранить на память</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Карточка 7 -->
+          <article class="card">
+            <div class="card__image-container">
+              <img class="card__image card__image_filter_blur" src="images/card-7.jpg" alt="Размытый фургон">
+              <span class="card__label">Туман</span>
+            </div>
+            <div class="card__content">
+              <h2 class="card__title">Туман новых технологий</h2>
+              <p class="card__text">Мир веб-разработки постоянно меняется, появляются новые технологии, фреймворки и подходы. Иногда это создает ощущение тумана — непонятно, куда двигаться дальше, что учить, какие технологии будут актуальны завтра. Важно научиться фокусироваться на фундаментальных концепциях, которые остаются неизменными.</p>
+              <div class="card__buttons">
+                <button class="button card__like-button">
+                  <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                  <span class="button__text">Like</span>
+                </button>
+                <button class="button card__save-button">
+                  <svg class="save-icon" width="24" height="24">
+                    <use href="images/icons.svg#save"></use>
+                  </svg>
+                  <span class="button__text">Сохранить на память</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Карточка 8 -->
+          <article class="card">
+            <div class="card__image-container">
+              <img class="card__image card__image_filter_complex" src="images/card-8.jpg" alt="Фургон с комплексным фильтром">
+              <span class="card__label">Путь</span>
+            </div>
+            <div class="card__content">
+              <h2 class="card__title">Продолжение пути</h2>
+              <p class="card__text">Путь веб-разработчика никогда не заканчивается. Каждый день приносит новые вызовы, проблемы и открытия. Это постоянное обучение, эксперименты и рост. И несмотря на все трудности, это увлекательное путешествие, полное интересных проектов и возможностей для творчества.</p>
+              <div class="card__buttons">
+                <button class="button card__like-button">
+                  <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                  <span class="button__text">Like</span>
+                </button>
+                <button class="button card__save-button">
+                  <svg class="save-icon" width="24" height="24">
+                    <use href="images/icons.svg#save"></use>
+                  </svg>
+                  <span class="button__text">Сохранить на память</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="modal">
+      <div class="modal__container">
+        <h2 class="modal__title">Сохранить на память</h2>
+        <div class="modal__content">
+          <div class="modal__column">
+            <svg class="save-icon modal__icon" width="48" height="48">
+              <use href="images/icons.svg#save"></use>
+            </svg>
+          </div>
+          <div class="modal__column">
+            <p class="modal__text">Карточка сохранена на память</p>
+          </div>
+        </div>
+        <button class="button modal__button">Ok</button>
+      </div>
+    </dialog>
+
     <script src="./scripts/like.js"></script>
   </body>
 </html>
