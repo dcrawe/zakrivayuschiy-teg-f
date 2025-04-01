@@ -300,7 +300,11 @@
 }
 
 .card__image_filter_sepia {
-  filter: sepia(70%);
+  filter: sepia(90%);
+}
+
+.card__image_filter_saturate {
+  filter: saturate(390%);
 }
 
 .card__image_filter_contrast {
