@@ -307,28 +307,24 @@
   filter: saturate(390%);
 }
 
-.card__image_filter_contrast {
-  filter: contrast(150%) brightness(90%);
+.card__image_filter_hue-rotate {
+  filter: hue-rotate(25deg);
 }
 
-.card__image_filter_hue-rotate {
-  filter: hue-rotate(90deg);
+.card__image_filter_sepia-grayscale {
+  filter: sepia(80%) grayscale(30%);
 }
 
 .card__image_filter_invert {
-  filter: invert(30%);
+  filter: invert(75%);
 }
 
 .card__image_filter_blur {
-  filter: blur(1px) brightness(90%);
+  filter: blur(20px);
 }
 
-.card__image_filter_complex {
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5)) saturate(150%) contrast(120%);
-}
-
-.card__image_filter_brightness {
-  filter: brightness(130%) contrast(110%);
+.card__image_filter_blur-hue-rotate-invert {
+  filter: blur(2px) hue-rotate(90deg) invert(25%);
 }
 
 /* Модальное окно */
