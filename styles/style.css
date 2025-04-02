@@ -209,11 +209,7 @@
 .sparks {
   opacity: 0;
 }
-.save-icon {
-  width: 24px;
-  height: 24px;
-}
-.like-icon, .save-icon {
+.like-icon {
   color: var(--primary-color);
   transition: color 0.2s ease, fill 0.2s ease;
 }
@@ -361,7 +357,7 @@
 }
 
 .save-button:hover .save-icon {
-  stroke: var(--secondary-color);
+  --icon-color: var(--secondary-color);
   mix-blend-mode: difference;
 }
 
