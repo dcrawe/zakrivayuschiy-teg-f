@@ -327,6 +327,50 @@
   filter: blur(2px) hue-rotate(90deg) invert(25%);
 }
 
+/* Кнопка вызова модального окна */
+.save-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 2px solid var(--primary-color);
+  padding: 12px 19px;
+  overflow: hidden;
+  min-inline-size: 335px;
+  fill: none;
+}
+
+.save-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--primary-color);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.save-button:hover::before {
+  transform: translateX(0);
+}
+
+.save-button .save-icon {
+  position: relative;
+  z-index: 1;
+  color: var(--primary-color);
+}
+
+.save-button:hover .save-icon {
+  stroke: var(--secondary-color);
+  mix-blend-mode: difference;
+}
+
+@media (width <= 375px) {
+  .save-button {
+    min-inline-size: 250px;
+  }
+}
+
 /* Модальное окно */
 .modal {
   padding: 0;
