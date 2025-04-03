@@ -26,7 +26,7 @@
   background-image: var(--gradient-background);
   background-size: cover;
   background-attachment: fixed;
-  padding-block: 102px;
+  padding-block: 100px;
 }
 
 .header {
@@ -45,7 +45,7 @@
   justify-content: center;
   align-items: center;
   border: 2px solid var(--primary-color);
-  height: clamp(323px, calc(299px + 6.4vw), 368px);
+  height: clamp(327px, calc(299px + 6.4vw), 368px);
   background-color: var(--background-color);
 }
 
@@ -118,7 +118,7 @@
 /* Контент карточки */
 .card__content {
   border-block-start: 2px solid var(--primary-color);
-  padding: var(--card-content-padding);
+  padding: var(--card-content-padding-block) var(--card-content-padding-inline);
   display: flex;
   flex-direction: column;
   gap: 27px;
@@ -126,9 +126,10 @@
 
 .card__title {
   font-variation-settings: 'wght' var(--font-weight-bold);
-  padding-inline: 10px;
-  padding-block: 5px;
+  padding-inline: 12px;
+  padding-block: 4px;
   font-size: 18px;
+  line-height: 22px;
   border-block-end: 1px solid var(--primary-color);
 }
 
@@ -470,7 +471,17 @@
   }
 
   .cards__container {
-    gap: 30px;
+    gap: 52px;
+  }
+
+  .save-button {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .save-button .save-icon {
+    width: 30px;
+    height: 36px;
   }
 
   .modal {
