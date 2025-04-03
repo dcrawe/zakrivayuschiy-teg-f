@@ -126,8 +126,8 @@
 
 .card__title {
   font-variation-settings: 'wght' var(--font-weight-bold);
-  padding-inline: 12px;
-  padding-block: 4px;
+  padding-inline: 11px;
+  padding-block: 5px;
   font-size: 18px;
   line-height: 22px;
   border-block-end: 1px solid var(--primary-color);
@@ -333,7 +333,7 @@
 .save-button {
   gap: 10px;
   border: 2px solid var(--primary-color);
-  padding: 12px 19px;
+  padding: 14px 17px;
   overflow: hidden;
 }
 
@@ -363,15 +363,15 @@
   padding: 7px 19px;
 }
 
-@media (width <= 375px) {
-  .save-button {
-    min-inline-size: 250px;
-  }
-}
-
 /* Подвал */
 .footer {
   padding-block-start: 50px;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Модальное окно */
@@ -454,29 +454,27 @@
 /* Адаптивность для мобильных устройств */
 @media (width <= 375px) {
   .page {
-    min-width: 320px;
+    min-width: 375px;
   }
 
   .container {
     width: 100%;
   }
 
-  .card {
-    border-left: none;
-    border-right: none;
-  }
-
   .header__container {
     padding: 0 10px;
   }
 
-  .cards__container {
-    gap: 52px;
+  .card__label {
+    top: 22px;
+    right: 10px;
   }
 
   .save-button {
     flex-direction: column;
-    gap: 5px;
+    gap: 4px;
+    padding: 11px 20px 14px;
+    min-inline-size: 250px;
   }
 
   .save-button .save-icon {
