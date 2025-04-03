@@ -406,38 +406,12 @@
               </div>
             </div>
           </article>
-
-          <!-- Карточка 8 -->
-          <article class="card">
-            <div class="card__image-container">
-              <img class="card__image card__image_filter_complex" src="images/card-8.jpg" alt="Фургон с комплексным фильтром">
-              <span class="card__label">Путь</span>
-            </div>
-            <div class="card__content">
-              <h2 class="card__title">Продолжение пути</h2>
-              <p class="card__text">Путь веб-разработчика никогда не заканчивается. Каждый день приносит новые вызовы, проблемы и открытия. Это постоянное обучение, эксперименты и рост. И несмотря на все трудности, это увлекательное путешествие, полное интересных проектов и возможностей для творчества.</p>
-              <div class="card__buttons">
-                <button class="button card__like-button">
-                  <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                  </svg>
-                  <span class="button__text">Like</span>
-                </button>
-                <button class="button card__save-button">
-                  <svg class="save-icon" width="24" height="24">
-                    <use href="svg/icons.svg#save"></use>
-                  </svg>
-                  <span class="button__text">Сохранить на память</span>
-                </button>
-              </div>
-            </div>
-          </article>
         </div>
       </section>
     </main>
     <footer class="footer">
       <div class="footer__container container">
-        <button class="button save-button" type="button">
+        <button class="button save-button" type="button" onclick="window['save-dialog'].showModal();">
           <svg class="save-icon" width="24" height="24">
             <use href="svg/icons.svg#floppy"></use>
           </svg>
@@ -446,20 +420,18 @@
       </div>
     </footer>
 
-    <dialog class="modal">
+    <dialog class="modal" id="save-dialog">
       <div class="modal__container">
-        <h2 class="modal__title">Сохранить на память</h2>
-        <div class="modal__content">
-          <div class="modal__column">
-            <svg class="save-icon modal__icon" width="48" height="48">
-              <use href="images/icons.svg#save"></use>
-            </svg>
-          </div>
-          <div class="modal__column">
-            <p class="modal__text">Карточка сохранена на память</p>
-          </div>
+        <div class="modal__header">
+          <svg class="save-icon" width="39" height="39">
+            <use href="svg/icons.svg#floppy"></use>
+          </svg>
+          <h2 class="modal__title">
+            Вставьте </br>
+            дискету, чтобы продолжить
+          </h2>
         </div>
-        <button class="button modal__button">Ok</button>
+        <button class="button modal__button" onclick="window['save-dialog'].close();">OK</button>
       </div>
     </dialog>
 

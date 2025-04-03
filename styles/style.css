@@ -26,11 +26,12 @@
   background-image: var(--gradient-background);
   background-size: cover;
   background-attachment: fixed;
+  padding-block: 102px;
 }
 
 .header {
   width: 100%;
-  margin-block: 102px 100px;
+  padding-block-end: 100px;
 }
 
 .container {
@@ -142,64 +143,6 @@
   flex-direction: row;
   justify-content: flex-end;
   gap: 7px;
-}
-
-.button {
-  display: inline-block;
-  background-color: var(--secondary-color);
-  cursor: pointer;
-  font-family: var(--font-main);
-  font-variation-settings: 'wght' var(--font-weight-regular);
-  border: none;
-}
-
-.button:focus {
-  outline: none;
-}
-
-.button:focus-visible {
-  box-shadow: 2px 2px 0 var(--primary-color);
-}
-
-.button__text {
-  position: relative;
-  z-index: 1;
-  color: var(--secondary-color);
-  mix-blend-mode: difference;
-  font-size: var(--button-text-size);
-  font-family: var(--font-accent);
-  font-variation-settings: 'wght' var(--font-weight-regular);
-}
-
-.card__like-button {
-  position: relative;
-  border: 2px solid var(--primary-color);
-  transition: box-shadow 0.3s ease;
-  padding: 7px;
-  overflow: hidden;
-  min-inline-size: 130px;
-}
-
-.card__like-button::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: var(--primary-color);
-  transform: translateX(-100%);
-  transition: transform 0.5s ease-in-out;
-}
-
-.card__like-button:hover::before {
-  transform: translateX(0);
-}
-
-.card__icon-button:focus-visible {
-  box-shadow: none;
-}
-
-.card__icon-button {
-  width: 38px;
-  height: 38px;
 }
 
 .like-icon {
@@ -323,18 +266,74 @@
   filter: blur(2px) hue-rotate(90deg) invert(25%);
 }
 
-/* Кнопка вызова модального окна */
-.save-button {
+/* Кнопка */
+.button {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--secondary-color);
+  cursor: pointer;
+  font-family: var(--font-main);
+  font-variation-settings: 'wght' var(--font-weight-regular);
+  border: none;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 var(--primary-color);
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+  color: var(--secondary-color);
+  mix-blend-mode: difference;
+  font-size: var(--button-text-size);
+  font-family: var(--font-accent);
+  font-variation-settings: 'wght' var(--font-weight-regular);
+}
+
+.card__like-button {
+  border: 2px solid var(--primary-color);
+  transition: box-shadow 0.3s ease;
+  padding: 7px;
+  overflow: hidden;
+  min-inline-size: 130px;
+}
+
+.save-button::before,
+.card__like-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--primary-color);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.save-button:hover::before,
+.card__like-button:hover::before {
+  transform: translateX(0);
+}
+
+.card__icon-button:focus-visible {
+  box-shadow: none;
+}
+
+.card__icon-button {
+  width: 38px;
+  height: 38px;
+}
+
+.save-button {
   gap: 10px;
   border: 2px solid var(--primary-color);
   padding: 12px 19px;
   overflow: hidden;
-  min-inline-size: 335px;
-  fill: none;
 }
 
 .save-button::before {
@@ -346,10 +345,6 @@
   transition: transform 0.5s ease-in-out;
 }
 
-.save-button:hover::before {
-  transform: translateX(0);
-}
-
 .save-button .save-icon {
   position: relative;
   z-index: 1;
@@ -357,8 +352,14 @@
 }
 
 .save-button:hover .save-icon {
-  --icon-color: var(--secondary-color);
+  color: var(--secondary-color);
   mix-blend-mode: difference;
+}
+
+.modal__button {
+  font-family: var(--font-accent);
+  border: 2px solid var(--primary-color);
+  padding: 7px 19px;
 }
 
 @media (width <= 375px) {
@@ -367,12 +368,23 @@
   }
 }
 
+/* Подвал */
+.footer {
+  padding-block-start: 50px;
+}
+
 /* Модальное окно */
 .modal {
   padding: 0;
   border: 2px solid var(--primary-color);
   border-radius: 0;
   background-color: var(--secondary-color);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  max-height: 90vh;
 }
 
 .modal[open] {
@@ -387,15 +399,27 @@
 
 .modal__container {
   padding: 30px;
-  max-width: 400px;
+  max-width: 357px;
   width: 100%;
+}
+
+.modal__header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.modal__header .save-icon {
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
 }
 
 .modal__title {
   font-family: var(--font-accent);
-  margin: 0 0 20px;
-  text-align: center;
-  font-size: clamp(16px, 3vw, 20px);
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 20px;
 }
 
 .modal__content {
@@ -422,6 +446,7 @@
 }
 
 .modal__button {
+  margin-block-start: 20px;
   width: 100%;
 }
 
@@ -446,6 +471,10 @@
 
   .cards__container {
     gap: 30px;
+  }
+
+  .modal {
+    width: 100%;
   }
 }
 
