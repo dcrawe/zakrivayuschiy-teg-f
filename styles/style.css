@@ -309,8 +309,8 @@
   background-color: var(--secondary-color);
 }
 
-.card__icon-button:focus-visible {
-  box-shadow: none;
+.card__icon-button:focus {
+  outline: none;
 }
 
 .save-button {
@@ -318,15 +318,6 @@
   padding: 14px 17px;
   border: 2px solid var(--primary-color);
   gap: 10px;
-}
-
-.save-button::before {
-  position: absolute;
-  content: '';
-  transition: transform 0.5s ease-in-out;
-  transform: translateX(-100%);
-  background-color: var(--primary-color);
-  inset: 0;
 }
 
 .save-button .save-icon {
@@ -348,12 +339,11 @@
   margin-block-start: 30px;
 }
 
-/* Подвал */
-.footer {
+.page-actions {
   padding-block-start: 50px;
 }
 
-.footer__container {
+.page-actions__container {
   display: flex;
   align-items: center;
   justify-content: center;

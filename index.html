@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="./images/favicon.ico" rel="shortcut icon" sizes="any" type="image/x-icon"/>
+  <link href="./images/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <link href="./images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+  <link href="./images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link href="./manifest.json" rel="manifest"/>
+  <meta content="MyWebSite" name="apple-mobile-web-app-title"/>
   <title>Закрывающий тег</title>
   <link href="./fonts/fonts.css" rel="stylesheet"/>
   <link href="./styles/variables.css" rel="stylesheet"/>
@@ -486,18 +492,17 @@
       </article>
     </div>
   </section>
+  <aside class="page-actions">
+    <div class="page-actions__container container">
+      <button class="button save-button" onclick="window['save-dialog'].showModal();" type="button">
+        <svg class="save-icon" height="24" width="24">
+          <use href="svg/icons.svg#floppy"></use>
+        </svg>
+        <span class="button__text">Сохранить на память</span>
+      </button>
+    </div>
+  </aside>
 </main>
-<footer class="footer">
-  <div class="footer__container container">
-    <button class="button save-button" onclick="window['save-dialog'].showModal();" type="button">
-      <svg class="save-icon" height="24" width="24">
-        <use href="svg/icons.svg#floppy"></use>
-      </svg>
-      <span class="button__text">Сохранить на память</span>
-    </button>
-  </div>
-</footer>
-
 <dialog class="modal" id="save-dialog">
   <div class="modal__container">
     <div class="modal__header">
@@ -505,14 +510,14 @@
         <use href="svg/icons.svg#floppy"></use>
       </svg>
       <h2 class="modal__title">
-        Вставьте
-        дискету, чтобы продолжить
+        Вставьте дискету, чтобы продолжить
       </h2>
     </div>
-    <button class="button modal__button" onclick="window['save-dialog'].close();" type="button">OK</button>
+    <button class="button modal__button" onclick="window['save-dialog'].close();" type="button">
+      <span class="button__text">OK</span>
+    </button>
   </div>
 </dialog>
-
 <script src="./scripts/like.js"></script>
 </body>
 </html>
