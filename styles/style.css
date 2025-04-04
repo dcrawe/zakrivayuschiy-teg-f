@@ -325,10 +325,6 @@
   background-color: var(--secondary-color);
 }
 
-.card__icon-button:focus {
-  outline: none;
-}
-
 .save-button {
   overflow: hidden;
   padding: 14px 17px;
