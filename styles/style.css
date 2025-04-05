@@ -44,9 +44,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: clamp(327px, calc(299px + 6.4vw), 368px);
   border: 2px solid var(--primary-color);
   background-color: var(--background-color);
+  padding-block: 128px;
+  padding-inline: 10px;
 }
 
 .header__title {
@@ -93,6 +94,7 @@
   top: 25px;
   right: clamp(13px, calc(13px + (25 - 13) * (100vw - 375px) / 325), 25px);
   text-align: center;
+  opacity: .5;
   color: var(--primary-color);
   text-shadow: -1px -1px 0 var(--text-stroke-color),
   1px -1px 0 var(--text-stroke-color),
@@ -144,22 +146,11 @@
 }
 
 .like-icon {
+  display: block;
   width: 36px;
   height: 36px;
-  display: block;
   transition: color 0.2s ease, fill 0.2s ease;
   color: var(--primary-color);
-}
-
-.card__icon-button:focus {
-  outline: none;
-}
-
-.card__icon-button:focus-visible {
-  box-shadow: 2px 2px 0 var(--primary-color);
-  transition: box-shadow 0.3s ease;
-  border: 2px solid var(--primary-color);
-  outline: none;
 }
 
 .like-icon_active {
@@ -196,9 +187,13 @@
   transition: fill 0.3s ease 0s;
 }
 
-.like-icon:active .core,
+.like-icon:active .core {
+  transition: fill 0.3s ease 0s;
+  fill: var(--animation-fill-color);
+}
+
 .like-icon:active .main-body {
-  transition-delay: 0s;
+  transition: fill 0.3s ease 0.05s;
   fill: var(--animation-fill-color);
 }
 
@@ -208,7 +203,7 @@
 }
 
 .like-icon.is-liked .main-body {
-  transition: fill 0.3s ease 0.03s;
+  transition: fill 0.3s ease 0.05s;
   fill: var(--animation-fill-color);
 }
 
@@ -317,12 +312,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
   width: 38px;
   height: 38px;
+  padding: 0;
   cursor: pointer;
+  transition: border 0.3s ease;
   border: 2px solid #fff;
   background-color: var(--secondary-color);
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--primary-color);
+  outline: none;
 }
 
 .save-button {
@@ -443,7 +448,7 @@
   }
 
   .header__container {
-    padding: 0 10px;
+    padding-block: 120px;
   }
 
   .card__label {
